@@ -1,6 +1,29 @@
-function hasTargetSum(array, target) {
+//function hasTargetSum(array, target) {
   // Write your algorithm here
+  let i = 0;
+let k = 0;
+let m = 0;
+//boolean b = false;
+const array =[];
+function hasTargetSum(arrInt, targetInt){
+  for (i = 0; i <arrInt.length-1; i++){
+    for (k= i+1;k< arrInt.length; k++ ){
+      console.log(arrInt[i]);
+      console.log(arrInt[k]);
+       array.push((arrInt[i]) + (arrInt[k]));
+      
+    }console.log(array);
+     m = array.find(function (num) {
+    if (num === targetInt){
+    return num }
+  }); console.log(m);
+    
+  } if (m === targetInt){
+      return true;
+    }return false;
 }
+//console.log(hasTargetSum([3, 8, 12, 4, 11], 7));
+
 
 /* 
   Write the Big O time complexity of your function here
